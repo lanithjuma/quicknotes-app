@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickNotes is a simple note-taking app that saves your notes in your browser.">
+  <title>QuickNotes App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+      <h1>QuickNotes</h1>
+      <p class="header-description">Capture ideas, organize your day, and find your notes fast.</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="panel composer-section" aria-labelledby="create-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">GET IT OUT OF YOUR HEAD</p>
+          <h2 id="create-heading">Create a note</h2>
+        </div>
+      </div>
+
+      <form id="note-form">
+        <div class="field">
+          <label for="note-input">Note text</label>
+          <input id="note-input" name="note" type="text" maxlength="200"
+                 placeholder="e.g. Review my JavaScript notes" autocomplete="off"
+                 aria-describedby="error-message">
+        </div>
+
+        <div class="field">
+          <label for="note-category">Category</label>
+          <select id="note-category" name="category">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+          </select>
+        </div>
+
+        <button class="button button-primary" type="submit">Add note <span aria-hidden="true">+</span></button>
+      </form>
+      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notes-heading">
+      <div class="notes-toolbar">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2 id="notes-heading">Your notes</h2>
+          <p id="note-count" class="note-count" aria-live="polite">You have no notes yet.</p>
+        </div>
+        <div class="search-field">
+          <label for="search-input">Search notes</label>
+          <input id="search-input" type="search" placeholder="Search your notes..." autocomplete="off">
+        </div>
+      </div>
+
+      <ul id="notes-list" class="notes-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty-state">No notes to show. Add your first note above.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>QuickNotes &copy; 2026 <span aria-hidden="true">·</span> Your notes stay in this browser.</p>
+  </footer>
+</body>
+</html>
