@@ -1,4 +1,4 @@
-# QuickNotes App
+         # QuickNotes App
 
 QuickNotes is a lightweight, responsive note-taking web app built with HTML, CSS, and vanilla JavaScript. It lets you create notes, assign them to categories, search your collection, and delete notes when they are no longer needed. Notes are stored in your browser using `localStorage`, so they remain available after a refresh on the same browser and device.
 
